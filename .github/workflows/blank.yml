@@ -123,4 +123,4 @@ jobs:
           
       - name: 163musician2
         run: |
-          ./163
+          bash /home/runner/gui/163/163
