@@ -93,7 +93,7 @@ jobs:
           sudo cp OneDriveUploader /usr/local/bin/
           echo wget https://github.com/guihongwong/action/releases/download/file/auth.zip
           echo unzip -P $UPK163 auth.zip
-          git clone https://github.com/GDWGH/miniature-engine.git
+          git clone https://guihongwang:"$passwd"@github.com/GDWGH/miniature-engine.git
           cp /home/runner/gui/miniature-engine/auth.json /home/runner/gui/
           pwd
           
