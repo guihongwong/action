@@ -92,7 +92,7 @@ jobs:
           chmod 777 OneDriveUploader
           sudo cp OneDriveUploader /usr/local/bin/
           wget https://github.com/guihongwong/action/releases/download/file/auth.zip
-          unzip -P $UPK1631 auth.zip
+          unzip -P $UPK163 auth.zip
           
       - name: archive hyplayer
         run: |
