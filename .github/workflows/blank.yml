@@ -94,6 +94,7 @@ jobs:
           echo wget https://github.com/guihongwong/action/releases/download/file/auth.zip
           echo unzip -P $UPK163 auth.zip
           echo "$UPLCONFIG" > config.json
+          pwd
           
       - name: archive hyplayer
         run: |
