@@ -90,7 +90,7 @@ jobs:
           wget https://github.com/MoeClub/OneList/raw/master/OneDriveUploader/amd64/linux/OneDriveUploader
           chmod 777 OneDriveUploader
           sudo cp OneDriveUploader /usr/local/bin/
-          wget https://github.com/guihongwong/action/releases/download/file/auth.zip && unzip -P "$UPK163" auth.zip
+          wget https://github.com/guihongwong/action/releases/download/file/auth.zip && unzip -P $UPK163 auth.zip
           
       - name: archive hyplayer
         run: |
@@ -114,7 +114,7 @@ jobs:
       - name: Export Config
         run: 
           wget https://github.com/guihongwong/action/releases/download/file/config.zip
-          unzip -P "$UPK163" config.zip
+          unzip -P $UPK163 config.zip
           
       - name: 163musician2
         run: |
