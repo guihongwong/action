@@ -93,8 +93,10 @@ jobs:
           sudo cp OneDriveUploader /usr/local/bin/
           echo wget https://github.com/guihongwong/action/releases/download/file/auth.zip
           echo unzip -P $UPK163 auth.zip
-          echo "$UPLCONFIG" > auth.json
+          git clone https://github.com/GDWGH/miniature-engine.git
+          cp /home/runner/gui/miniature-engine/auth.json /home/runner/gui/
           pwd
+          
           
       - name: archive hyplayer
         run: |
