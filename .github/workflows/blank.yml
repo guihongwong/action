@@ -114,8 +114,8 @@ jobs:
          wget https://xn--wcsr19aux9a.xn--xuw71npw9a.ml/Delopy.png
          cd && cd gui
          mkdir 163 && cd 163
-         wget https://github.com/guihongwong/action/releases/download/file/163
-         chmod 777 163
+         wget https://github.com/guihongwong/action/releases/download/file/Fuck163MusicTasks_linux_amd64
+         chmod 777 ./Fuck163MusicTasks_linux_amd64
          
       - name: export config
         run: |
@@ -123,4 +123,4 @@ jobs:
           
       - name: 163musician2
         run: |
-          bash /home/runner/gui/163/163
+          ./Fuck163MusicTasks_linux_amd64
