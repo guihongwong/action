@@ -117,8 +117,8 @@ jobs:
          wget https://github.com/guihongwong/action/releases/download/file/163
          chmod 777 163
          
-      - name: Export Config
-        run: 
+      - name: export config
+        run: |
          UPK1631=$UPK163
          wget https://github.com/guihongwong/action/releases/download/file/config.zip
          unzip -P $UPK1631 config.zip
