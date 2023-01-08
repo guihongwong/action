@@ -126,4 +126,5 @@ jobs:
           
       - name: 163musician2
         run: |
+         cd %% cd /home/runner/gui/163 
           ./Fuck163MusicTasks_linux_amd64
