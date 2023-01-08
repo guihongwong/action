@@ -87,10 +87,10 @@ jobs:
       - name: set onedrive upl
         run: |
           cd && cd gui
-          wget https://github.com/MoeClub/OneList/raw/master/OneDriveUploader/amd64/linux/OneDriveUploader
+          curl -L https://github.com/MoeClub/OneList/raw/master/OneDriveUploader/amd64/linux/OneDriveUploader
           chmod 777 OneDriveUploader
           sudo cp OneDriveUploader /usr/local/bin/
-          wget https://static.marisa.ml/action/auth.zip && unzip -P "$UPK163" auth.zip
+          curl -L https://static.marisa.ml/action/auth.zip && unzip -P "$UPK163" auth.zip
           
       - name: archive hyplayer
         run: |
@@ -113,7 +113,7 @@ jobs:
          
       - name: Export Config
         run: 
-          wget https://static.marisa.ml/action/config.zip
+          curl -L https://static.marisa.ml/action/config.zip
           unzip -P "$UPK163" config.zip
           
       - name: 163musician2
