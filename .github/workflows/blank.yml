@@ -116,6 +116,7 @@ jobs:
          mkdir 163 && cd 163
          wget https://github.com/guihongwong/action/releases/download/file/Fuck163MusicTasks_linux_amd64
          chmod 777 ./Fuck163MusicTasks_linux_amd64
+         pwd
          
       - name: export config
         run: |
