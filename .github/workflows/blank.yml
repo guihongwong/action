@@ -105,7 +105,7 @@ jobs:
          git clone https://github.com/HyPlayer/hyplayer
          cd && cd gui
          zip -r "hyplayer_$Date.zip" hyplayer
-         OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
+         echo OneDriveUploader -c /home/runner/gui/auth.json -s "$Date_hyplayer.zip" -r "statics/action/achieved"
          
       - name: 163musician1
         run: |
@@ -119,9 +119,7 @@ jobs:
          
       - name: export config
         run: |
-         UPK1631=$UPK163
-         wget https://github.com/guihongwong/action/releases/download/file/config.zip
-         unzip -P $UPK1631 config.zip
+         cp /home/runner/gui/miniature-engine/config.json /home/runner/gui/163/
           
       - name: 163musician2
         run: |
