@@ -120,7 +120,9 @@ jobs:
          
       - name: export config
         run: |
-         cp /home/runner/gui/miniature-engine/config.json /home/runner/gui/163/
+         cd && cd gui 
+         cp /home/runner/gui/miniature-engine/config.json 163/
+         cd 163
           
       - name: 163musician2
         run: |
