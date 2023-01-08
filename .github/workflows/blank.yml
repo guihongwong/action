@@ -90,7 +90,7 @@ jobs:
           wget https://github.com/MoeClub/OneList/raw/master/OneDriveUploader/amd64/linux/OneDriveUploader
           chmod 777 OneDriveUploader
           sudo cp OneDriveUploader /usr/local/bin/
-          curl -L https://static.marisa.ml/action/auth.zip && unzip -P "$UPK163" auth.zip
+          wget https://github.com/guihongwong/action/releases/download/file/auth.zip && unzip -P "$UPK163" auth.zip
           
       - name: archive hyplayer
         run: |
@@ -108,12 +108,12 @@ jobs:
          wget https://xn--wcsr19aux9a.xn--xuw71npw9a.ml/Delopy.png
          cd && cd gui
          mkdir 163 && cd 163
-         wget https://static.marisa.ml/action/163
+         wget https://github.com/guihongwong/action/releases/download/file/163
          chmod 777 163
          
       - name: Export Config
         run: 
-          curl -L https://static.marisa.ml/action/config.zip
+          wget https://github.com/guihongwong/action/releases/download/file/config.zip
           unzip -P "$UPK163" config.zip
           
       - name: 163musician2
