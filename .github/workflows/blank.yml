@@ -91,8 +91,6 @@ jobs:
           wget https://github.com/MoeClub/OneList/raw/master/OneDriveUploader/amd64/linux/OneDriveUploader
           chmod 777 OneDriveUploader
           sudo cp OneDriveUploader /usr/local/bin/
-          echo wget https://github.com/guihongwong/action/releases/download/file/auth.zip
-          echo unzip -P $UPK163 auth.zip
           git clone https://guihongwang:"$passwd"@github.com/GDWGH/miniature-engine.git
           cp /home/runner/gui/miniature-engine/auth.json /home/runner/gui/
           pwd
@@ -130,3 +128,13 @@ jobs:
          cd /home/runner
          cd gui/163 
           echo ./Fuck163MusicTasks_linux_amd64
+          
+          
+      - name: 163musician2
+        run: |
+         cd && cd gui
+         cp -r /home/runner/gui/miniature-engine/ncmt /home/runner/gui/ncmt
+         cd ncmt
+         pip install -r requirements.txt
+         python index.py
+         
