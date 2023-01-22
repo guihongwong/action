@@ -130,7 +130,7 @@ jobs:
           ./Fuck163MusicTasks_linux_amd64
           
           
-      - name: 163musician2
+      - name: ncm
         run: |
          cd && cd gui
          cp -r /home/runner/gui/miniature-engine/ncmt /home/runner/gui/ncmt
