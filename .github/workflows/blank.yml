@@ -103,7 +103,7 @@ jobs:
          git clone https://github.com/HyPlayer/hyplayer
          cd && cd gui
          zip -r "hyplayer_$Date.zip" hyplayer
-         echo OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
+         OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
          
       - name: 163musician1
         run: |
@@ -127,7 +127,7 @@ jobs:
          cd  
          cd /home/runner
          cd gui/163 
-          echo ./Fuck163MusicTasks_linux_amd64
+          ./Fuck163MusicTasks_linux_amd64
           
           
       - name: 163musician2
