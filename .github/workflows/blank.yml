@@ -34,14 +34,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - uses: pnpm/action-setup@v2.2.4
-        timeout-minutes: 10
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          check-latest: true
-          cache: pnpm
             
       # Runs a single command using the runners shell
       #- name: Run a one-line script
@@ -59,7 +52,7 @@ jobs:
           git lfs install
           git lfs track "*.zip"
           
-      - name: build patchyvideo
+      - name: clone patchyvideo
         run: |
           echo $ze
           npm install -g pnpm
@@ -67,6 +60,18 @@ jobs:
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
           git checkout nuxt
+          
+      - uses: pnpm/action-setup@v2.2.4
+        timeout-minutes: 10
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          check-latest: true
+          cache: pnpm
+
+      - name: build patchyvideo
+        run: |
           pnpm install --frozen-lockfile
           pnpm lint
           ls
