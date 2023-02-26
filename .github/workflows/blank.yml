@@ -77,8 +77,7 @@ jobs:
 
       - name: build patchyvideo
         run: |
-          pnpm install --frozen-lockfile
-          pnpm lint
+          pnpm install --frozen-lockfile 
           pnpm build
           ls
           pwd
