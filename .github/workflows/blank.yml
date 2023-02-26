@@ -64,8 +64,9 @@ jobs:
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
           git checkout nuxt
+          cd /home/runner/work/action/action
           cp -r /home/runner/work/action/action/platinum/ /home/runner/work/action/action
-          
+          cd platinum
           
       - name: build patchyvideo
         run: |
