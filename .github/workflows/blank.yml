@@ -33,7 +33,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
 
             
       # Runs a single command using the runners shell
@@ -51,24 +50,15 @@ jobs:
           pwd
           git lfs install
           git lfs track "*.zip"
-
-          
-
-      - name: fake path
-        run: |
-          cd /home/runner/work/action/action/
-
-      - name: clone patchyvideo
-        run: |
-          echo $ze
-          git clone https://github.com/PatchyVideo/platinum.git
-          cd platinum
-          echo git checkout nuxt
           
       - name: build patchyvideo
         run: |
-          npm i -global pnpm
-          pnpm install --frozen-lockfile
+          echo $ze
+          npm install -g pnpm
+          pnpm -v 
+          git clone https://github.com/PatchyVideo/platinum.git
+          cd platinum
+          pnpm i
           pnpm codegen
           pnpm build
           ls
