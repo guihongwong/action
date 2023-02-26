@@ -66,6 +66,7 @@ jobs:
       - name: clone patchyvideo
         run: |
           echo $ze
+          cd /home/runner/
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
           git checkout nuxt
