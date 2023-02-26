@@ -58,9 +58,12 @@ jobs:
         run: |
           wget https://github.com/PatchyVideo/platinum/raw/main/package.json
           wget https://github.com/PatchyVideo/platinum/raw/main/pnpm-lock.yaml
-          mkdir scripts
-          cd scripts 
+          mkdir scripts && cd scripts 
           wget https://github.com/PatchyVideo/platinum/raw/main/scripts/codegen.js
+          cd /home/runner/work/action/action/
+          mkdir packages && cd packages
+          mkdir graphql && cd graphql
+          wget https://github.com/PatchyVideo/platinum/raw/main/packages/graphql/codegen.yml
           cd /home/runner/work/action/action/
 
       - name: clone patchyvideo
