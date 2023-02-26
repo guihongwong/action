@@ -51,12 +51,11 @@ jobs:
           pwd
           git lfs install
           git lfs track "*.zip"
+          wget https://github.com/PatchyVideo/platinum/raw/main/package.json
           
       - name: clone patchyvideo
         run: |
           echo $ze
-          npm install -g pnpm
-          pnpm -v 
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
           git checkout nuxt
