@@ -63,7 +63,7 @@ jobs:
           echo $ze
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
-          git checkout nuxt
+          echo git checkout nuxt
           
       - name: build patchyvideo
         run: |
