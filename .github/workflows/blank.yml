@@ -59,9 +59,8 @@ jobs:
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
           git checkout nuxt
-          pnpm i
-          pnpm codegen
-          pnpm build
+          pnpm install --frozen-lockfile
+          pnpm lint
           ls
           pwd
       
