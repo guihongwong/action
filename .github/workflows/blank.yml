@@ -66,17 +66,11 @@ jobs:
           cd platinum
           git checkout nuxt
           
-      - uses: pnpm/action-setup@v2.2.4
-        timeout-minutes: 10
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          check-latest: true
-          cache: pnpm
-
+          
+          
       - name: build patchyvideo
         run: |
+          npm i -global pnpm
           pnpm install --frozen-lockfile
           pnpm codegen
           pnpm build
