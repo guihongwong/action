@@ -51,8 +51,14 @@ jobs:
           pwd
           git lfs install
           git lfs track "*.zip"
-          wget https://github.com/PatchyVideo/platinum/raw/main/package.json
+
           
+
+      - name: fake path
+        run: |
+          wget https://github.com/PatchyVideo/platinum/raw/main/package.json
+          wget https://github.com/PatchyVideo/platinum/raw/main/pnpm-lock.yaml
+
       - name: clone patchyvideo
         run: |
           echo $ze
