@@ -58,7 +58,7 @@ jobs:
           pnpm -v 
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
-          pnpm i
+          pnpm install --frozen-lockfile
           pnpm codegen
           pnpm build
           ls
