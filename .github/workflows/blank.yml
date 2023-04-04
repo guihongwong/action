@@ -51,6 +51,11 @@ jobs:
           git lfs install
           git lfs track "*.zip"
           
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+          
       - name: build patchyvideo
         run: |
           echo $ze
@@ -58,7 +63,7 @@ jobs:
           pnpm -v 
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
-          pnpm install --frozen-lockfile
+          pnpm i
           pnpm codegen
           pnpm build
           ls
