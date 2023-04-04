@@ -59,8 +59,8 @@ jobs:
       - name: build patchyvideo
         run: |
           echo $ze
-          npm install -g pnpm
-          pnpm -v 
+          npm install pnpm@7 -g
+          pnpm -v
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
           pnpm i
