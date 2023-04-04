@@ -51,10 +51,6 @@ jobs:
           git lfs install
           git lfs track "*.zip"
           
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
           
       - name: build patchyvideo
         run: |
