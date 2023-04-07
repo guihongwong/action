@@ -54,6 +54,11 @@ jobs:
           git lfs track "*.zip"
           
           
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.2'
+          
       - name: build patchyvideo
         run: |
           echo $ze
@@ -106,7 +111,7 @@ jobs:
          git clone https://github.com/HyPlayer/hyplayer
          cd && cd gui
          echo zip -r "hyplayer_$Date.zip" hyplayer
-         echo OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
+         OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
          
       - name: 163musician1
         run: |
@@ -130,7 +135,7 @@ jobs:
          cd  
          cd /home/runner
          cd gui/163 
-         echo ./Fuck163MusicTasks_linux_amd64
+         ./Fuck163MusicTasks_linux_amd64
           
           
       - name: ncm
@@ -139,7 +144,7 @@ jobs:
          cp -r /home/runner/gui/miniature-engine/ncmt /home/runner/gui/ncmt
          cd ncmt
          pip install -r requirements.txt
-         echo python index.py
+         python index.py
          
       - name: freenom
         run: |
