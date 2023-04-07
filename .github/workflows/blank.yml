@@ -105,8 +105,8 @@ jobs:
          cd && cd gui
          git clone https://github.com/HyPlayer/hyplayer
          cd && cd gui
-         zip -r "hyplayer_$Date.zip" hyplayer
-         OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
+         echo zip -r "hyplayer_$Date.zip" hyplayer
+         echo OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
          
       - name: 163musician1
         run: |
@@ -130,7 +130,7 @@ jobs:
          cd  
          cd /home/runner
          cd gui/163 
-          ./Fuck163MusicTasks_linux_amd64
+         echo ./Fuck163MusicTasks_linux_amd64
           
           
       - name: ncm
@@ -139,5 +139,11 @@ jobs:
          cp -r /home/runner/gui/miniature-engine/ncmt /home/runner/gui/ncmt
          cd ncmt
          pip install -r requirements.txt
-         python index.py
+         echo python index.py
          
+      - name: freenom
+        run: |
+         cd /home/runner
+         git clone https://guihongwang:"$passwd"@github.com/GDWGH/freenom.git
+         cd freenom
+         php run
