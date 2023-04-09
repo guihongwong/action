@@ -136,7 +136,7 @@ jobs:
          cd  
          cd /home/runner
          cd gui/163 
-         ./Fuck163MusicTasks_linux_amd64
+         echo ./Fuck163MusicTasks_linux_amd64
           
           
       - name: ncm
@@ -145,11 +145,11 @@ jobs:
          cp -r /home/runner/gui/miniature-engine/ncmt /home/runner/gui/ncmt
          cd ncmt
          pip install -r requirements.txt
-         python index.py
+         echo python index.py
          
       - name: freenom
         run: |
          cd /home/runner
          wget https://raw.githubusercontent.com/Oreomeow/freenom-py/main/FNplus.py
-         python3 FNplus.py -u "$FREENOMUSR" -p $FREENOMWD
+         python3 FNplus.py -u "$FREENOMUSR" -p "$FREENOMWD"
         
