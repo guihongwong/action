@@ -90,6 +90,7 @@ jobs:
          git add .
          git commit -m "patchyvideo has been deploy Ze☆"
          git branch -M main
+         git pull
          git push -u origin main
          
       - name: set onedrive upl
