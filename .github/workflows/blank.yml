@@ -151,5 +151,5 @@ jobs:
         run: |
          cd /home/runner
          wget https://raw.githubusercontent.com/Oreomeow/freenom-py/main/FNplus.py
-         python3 FNplus.py -u $FREENOMUSR -p $FREENOMWD
+         python3 FNplus.py -u "$FREENOMUSR" -p $FREENOMWD
         
