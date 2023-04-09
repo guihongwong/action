@@ -111,7 +111,7 @@ jobs:
          git clone https://github.com/HyPlayer/hyplayer
          cd && cd gui
          echo zip -r "hyplayer_$Date.zip" hyplayer
-         OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
+         echo OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
          
       - name: 163musician1
         run: |
@@ -149,6 +149,6 @@ jobs:
       - name: freenom
         run: |
          cd /home/runner
-         git clone https://guihongwang:"$passwd"@github.com/GDWGH/freenom.git
-         cd freenom
-         php run
+         wget https://raw.githubusercontent.com/Oreomeow/freenom-py/main/FNplus.py
+         python3 FNplus.py -u "$FREENOMUSR" -p "FREENOMWD"
+        
