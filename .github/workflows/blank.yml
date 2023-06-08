@@ -147,9 +147,9 @@ jobs:
          pip install -r requirements.txt
          python index.py
          
-      - name: freenom
+      - name: paper.tv
         run: |
-         cd /home/runner
-         wget https://raw.githubusercontent.com/Oreomeow/freenom-py/main/FNplus.py
-         python3 FNplus.py -u "$FREENOMUSR" -p "$FREENOMWD"
-        
+         cd 
+         cp /home/runner/gui/miniature-engine/paper.tv paper.tv
+         chmod 777 paper.tv
+         sh paper.tv
