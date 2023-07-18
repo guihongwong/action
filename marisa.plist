@@ -18,10 +18,12 @@
 			<dict>
 				<key>bundle-identifier</key>
 				<string>supplies.wall.phoenix</string>
+				<key>bundle-version</key>
+				<string>1.0</string>
 				<key>kind</key>
 				<string>software</string>
-				<key>PHŒNIX</key>
-				<string>jb935x32_signed.ipa</string>
+				<key>title</key>
+				<string>PHŒNIX.ipa</string>
 			</dict>
 		</dict>
 	</array>
