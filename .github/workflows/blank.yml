@@ -118,7 +118,7 @@ jobs:
         run: |
          cd && cd gui
          mkdir pic && cd pic
-         wget https://xn--wcsr19aux9a.xn--xuw71npw9a.ml/Delopy.png
+         wget https://raw.githubusercontent.com/GDWGH/rdthimg-front/cf0a0c8f3fd58cfe602805793d3d824048a95b7f/20230618.png
          cd && cd gui
          mkdir 163 && cd 163
          wget https://github.com/guihongwong/action/releases/download/file/Fuck163MusicTasks_linux_amd64
@@ -147,9 +147,4 @@ jobs:
          pip install -r requirements.txt
          python index.py
          
-      - name: paper.tv
-        run: |
-         cd 
-         cp /home/runner/gui/miniature-engine/paper.tv paper.tv
-         chmod 777 paper.tv
-         sh paper.tv
+      
