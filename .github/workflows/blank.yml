@@ -34,7 +34,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - uses: fscarmen/warp-on-actions@v2
+      - uses: fscarmen/warp-on-actions@v1.0
+    with:
+      mode: wireguard
 
             
       # Runs a single command using the runners shell
