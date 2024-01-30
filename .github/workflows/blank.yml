@@ -55,7 +55,7 @@ jobs:
       - name: Set up WARP
         uses: fscarmen/warp-on-actions@v1.0
         with:
-         mode: wireguard
+         mode: client
           
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
