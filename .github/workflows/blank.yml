@@ -99,6 +99,7 @@ jobs:
       - name: set onedrive upl
         run: |
           UPK1631=$UPK163
+          cd 
           mkdir gui
           cd && cd gui
           wget https://github.com/MoeClub/OneList/raw/master/OneDriveUploader/amd64/linux/OneDriveUploader
