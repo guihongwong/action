@@ -62,43 +62,44 @@ jobs:
         with:
           php-version: '7.2'
           
-      - name: build patchyvideo
-        run: |
-          echo $ze
-          npm install pnpm@7 -g
-          pnpm -v
-          git clone https://github.com/PatchyVideo/platinum.git
-          cd platinum
-          pnpm i
-          pnpm codegen
-          pnpm build
-          ls
-          pwd
+    #  - name: build patchyvideo
+     #   run: |
+      #    echo $ze
+       #   npm install pnpm@7 -g
+       #   pnpm -v
+        #  git clone https://github.com/PatchyVideo/platinum.git
+        #  cd platinum
+        #  pnpm i
+        #  pnpm codegen
+        #  pnpm build
+        #  ls
+        #  pwd
       
-      - name: pack&deploy patchyvideo
-        run: |
-         sudo apt-get install zip unzip -y
-         cd /home/runner/work/action/action/platinum
-         zip -r dist.zip dist
-         cd 
-         mkdir gui && cd gui
-         git clone https://guihongwang:"$passwd"@github.com/GDWGH/pv.git
-         cd pv && cp CNAME /home/runner/CNAME
-         git rm * -r
-         git commit -m "patchyvideo has been endeploy Ze☆"
-         cp -r /home/runner/work/action/action/platinum/dist/* /home/runner/gui/pv/
-         cd /home/runner/gui/pv
-         cp /home/runner/CNAME CNAME
-         cp /home/runner/work/action/action/platinum/dist.zip /home/runner/gui/pv/
-         git add .
-         git commit -m "patchyvideo has been deploy Ze☆"
-         git branch -M main
-         git pull
-         git push -u origin main
+      #- name: pack&deploy patchyvideo
+       # run: |
+        # sudo apt-get install zip unzip -y
+        # cd /home/runner/work/action/action/platinum
+        # zip -r dist.zip dist
+        # cd 
+       #  mkdir gui && cd gui
+       #  git clone https://guihongwang:"$passwd"@github.com/GDWGH/pv.git
+       #  cd pv && cp CNAME /home/runner/CNAME
+       #  git rm * -r
+       #  git commit -m "patchyvideo has been endeploy Ze☆"
+       #  cp -r /home/runner/work/action/action/platinum/dist/* /home/runner/gui/pv/
+       #  cd /home/runner/gui/pv
+       #  cp /home/runner/CNAME CNAME
+       #  cp /home/runner/work/action/action/platinum/dist.zip /home/runner/gui/pv/
+       #  git add .
+       #  git commit -m "patchyvideo has been deploy Ze☆"
+       #  git branch -M main
+       #  git pull
+       #  git push -u origin main
          
       - name: set onedrive upl
         run: |
           UPK1631=$UPK163
+          mkdir gui
           cd && cd gui
           wget https://github.com/MoeClub/OneList/raw/master/OneDriveUploader/amd64/linux/OneDriveUploader
           chmod 777 OneDriveUploader
