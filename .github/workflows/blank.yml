@@ -160,9 +160,8 @@ jobs:
          unzip b.zip
          cd b
          pwd
-        # cp /home/runner/gui/miniature-engine/cookies.json /home/runner/gui/b
-        # cd b
-        # chmod 777 Ray.BiliBiliTool.Console
-        # ./Ray.BiliBiliTool.Console --runTasks=Daily
+         cp /home/runner/gui/miniature-engine/cookies.json /home/runner/b
+         chmod 777 Ray.BiliBiliTool.Console
+         ./Ray.BiliBiliTool.Console --runTasks=Daily
          
       
