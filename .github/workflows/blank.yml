@@ -156,6 +156,10 @@ jobs:
       - name: b
         run:   |
          cd
-         dotnet
+         wget https://github.com/guihongwong/action/releases/download/file/b.zip
+         cp /home/runner/gui/miniature-engine/cookies.json /home/runner/gui/b/
+         cd b
+         chmod 777 Ray.BiliBiliTool.Console
+         ./Ray.BiliBiliTool.Console --runTasks=Daily
          
       
