@@ -141,7 +141,7 @@ jobs:
          cd  
          cd /home/runner
          cd gui/163 
-         echo "./Fuck163MusicTasks_linux_amd64"
+         ./Fuck163MusicTasks_linux_amd64
           
           
       - name: ncm
@@ -150,18 +150,7 @@ jobs:
          cp -r /home/runner/gui/miniature-engine/ncmt /home/runner/gui/ncmt
          cd ncmt
          pip install -r requirements.txt
-         echo "python index.py"
+         python index.py
 
 
-      - name: b
-        run:   |
-         cd
-         wget https://github.com/guihongwong/action/releases/download/file/b.zip
-         unzip b.zip
-         cd b
-         pwd
-         cp /home/runner/gui/miniature-engine/cookies.json /home/runner/b
-         chmod 777 Ray.BiliBiliTool.Console
-         ./Ray.BiliBiliTool.Console --runTasks=Daily
-         
       
