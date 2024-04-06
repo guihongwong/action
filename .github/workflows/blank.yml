@@ -141,7 +141,7 @@ jobs:
          cd  
          cd /home/runner
          cd gui/163 
-         ./Fuck163MusicTasks_linux_amd64
+         echo "./Fuck163MusicTasks_linux_amd64"
           
           
       - name: ncm
@@ -150,6 +150,12 @@ jobs:
          cp -r /home/runner/gui/miniature-engine/ncmt /home/runner/gui/ncmt
          cd ncmt
          pip install -r requirements.txt
-         python index.py
+         echo "python index.py"
+
+
+      - name: b
+        run:   |
+         cd
+         dotnet
          
       
