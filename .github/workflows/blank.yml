@@ -96,39 +96,24 @@ jobs:
        #  git pull
        #  git push -u origin main
          
-      - name: set onedrive upl
+      - name: sec
         run: |
-          UPK1631=$UPK163
           cd 
           mkdir gui
           cd && cd gui
-          wget https://github.com/MoeClub/OneList/raw/master/OneDriveUploader/amd64/linux/OneDriveUploader
-          chmod 777 OneDriveUploader
-          sudo cp OneDriveUploader /usr/local/bin/
           git clone https://guihongwang:"$passwd"@github.com/GDWGH/miniature-engine.git
-          cp /home/runner/gui/miniature-engine/auth.json /home/runner/gui/
           pwd
-          
-          
-      - name: archive hyplayer
-        run: |
-         Date=$(date "+%Y%m%d")
-         cd && cd gui
-         git clone https://github.com/HyPlayer/hyplayer
-         cd && cd gui
-         echo zip -r "hyplayer_$Date.zip" hyplayer
-         echo OneDriveUploader -c /home/runner/gui/auth.json -s "hyplayer_$Date.zip" -r "statics/action/achieved"
          
-      - name: 163musician1
-        run: |
-         cd && cd gui
-         mkdir pic && cd pic
-         wget https://raw.githubusercontent.com/GDWGH/rdthimg-front/cf0a0c8f3fd58cfe602805793d3d824048a95b7f/20230618.png
-         cd && cd gui
-         mkdir 163 && cd 163
-         wget https://github.com/guihongwong/action/releases/download/file/Fuck163MusicTasks_linux_amd64
-         chmod 777 ./Fuck163MusicTasks_linux_amd64
-         pwd
+    #  - name: 163musician1
+    #    run: |
+    #     cd && cd gui
+    #     mkdir pic && cd pic
+    #     wget https://raw.githubusercontent.com/GDWGH/rdthimg-front/cf0a0c8f3fd58cfe602805793d3d824048a95b7f/20230618.png
+    #     cd && cd gui
+    #     mkdir 163 && cd 163
+    #     wget https://github.com/guihongwong/action/releases/download/file/Fuck163MusicTasks_linux_amd64
+    #     chmod 777 ./Fuck163MusicTasks_linux_amd64
+    #     pwd
          
       - name: export config
         run: |
@@ -136,12 +121,12 @@ jobs:
          cp /home/runner/gui/miniature-engine/config.json 163/
          cd 163
           
-      - name: 163musician2
-        run: |
-         cd  
-         cd /home/runner
-         cd gui/163 
-         ./Fuck163MusicTasks_linux_amd64
+     # - name: 163musician2
+       # run: |
+        # cd  
+        # cd /home/runner
+        # cd gui/163 
+        # ./Fuck163MusicTasks_linux_amd64
           
           
       - name: ncm
@@ -163,3 +148,12 @@ jobs:
          cp /home/runner/gui/miniature-engine/cookies.json /home/runner/b
          chmod 777 Ray.BiliBiliTool.Console
          ./Ray.BiliBiliTool.Console --runTasks=Daily
+
+      - name: mfuns
+        run: |
+         cd && cd gui 
+         git clone https://guihongwang:"$passwd"@github.com/GDWGH/CheckInForMfuns.git
+         cd CheckInForMfuns
+         pip install -r requirements.txt
+         cp /home/runner/gui/miniature-engine/token /home/runner/gui/CheckInForMfuns
+         python3 main.py
