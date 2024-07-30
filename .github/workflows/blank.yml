@@ -115,11 +115,11 @@ jobs:
     #     chmod 777 ./Fuck163MusicTasks_linux_amd64
     #     pwd
          
-      - name: export config
-        run: |
-         cd && cd gui 
-         cp /home/runner/gui/miniature-engine/config.json 163/
-         cd 163
+    #  - name: export config
+    #    run: |
+    #     cd && cd gui 
+    #     cp /home/runner/gui/miniature-engine/config.json 163/
+    #     cd 163
           
      # - name: 163musician2
        # run: |
