@@ -53,9 +53,9 @@ jobs:
           git lfs track "*.zip"
           
       - name: Set up WARP
-        uses: fscarmen/warp-on-actions@v1.0
+        uses: fscarmen/warp-on-actions@v1.2
         with:
-         mode: client
+          stack: dual   # Optional. Support [ ipv4, ipv6, dual ]. Default is dual.
           
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
