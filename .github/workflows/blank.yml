@@ -57,10 +57,6 @@ jobs:
         with:
           stack: dual   # Optional. Support [ ipv4, ipv6, dual ]. Default is dual.
           
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.2'
           
     #  - name: build patchyvideo
      #   run: |
@@ -129,13 +125,13 @@ jobs:
          ./Fuck163MusicTasks_linux_amd64
           
           
-      - name: ncm
-        run: |
-         cd && cd gui
-         cp -r /home/runner/gui/miniature-engine/ncmt /home/runner/gui/ncmt
-         cd ncmt
-         pip install -r requirements.txt
-         python index.py
+#      - name: ncm
+#        run: |
+#         cd && cd gui
+#         cp -r /home/runner/gui/miniature-engine/ncmt /home/runner/gui/ncmt
+#         cd ncmt
+#         pip install -r requirements.txt
+#         python index.py
 
 
       - name: b
