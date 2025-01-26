@@ -153,3 +153,13 @@ jobs:
          pip install -r requirements.txt
          cp /home/runner/gui/miniature-engine/token /home/runner/gui/CheckInForMfuns
          python3 main.py
+         
+      - name: kuro
+        run:   |
+         cd
+         git clone https://github.com/mxyooR/Kuro-autosignin.git
+         cd Kuro-autosignin
+         pip install -r  requirements.txt
+         pwd
+         cp /home/runner/gui/miniature-engine/data.json /home/runner/Kuro-autosignin/config/
+         py main.py
