@@ -161,5 +161,5 @@ jobs:
          cd Kuro-autosignin
          pip install -r  requirements.txt
          pwd
-         cp /home/runner/gui/miniature-engine/data.json /home/runner/Kuro-autosignin/config/
+         cp /home/runner/gui/miniature-engine/data.yaml /home/runner/Kuro-autosignin/config/
          python main.py
