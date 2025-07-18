@@ -163,3 +163,13 @@ jobs:
          pwd
          cp /home/runner/gui/miniature-engine/data.yaml /home/runner/Kuro-autosignin/config/
          python main.py
+
+      - name: ssp
+        run:   |
+         cd
+         wget https://github.com/guihongwong/action/releases/download/file/SSPanel-Auto
+         chmod 777 SSPanel-Auto
+         ./SSPanel-Auto --host "$SPDM" checkin -e "$SPEML" -p "$SPPD"
+
+
+         
