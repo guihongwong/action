@@ -169,7 +169,7 @@ jobs:
          cd
          wget https://github.com/guihongwong/action/releases/download/file/SSPanel-Auto
          chmod 777 SSPanel-Auto
-         ./SSPanel-Auto --host "$SPDM" checkin -e "$SPEML" -p "$SPPD"
+         ./SSPanel-Auto --host https://ikuuu.de checkin -e "$SPEML" -p "$SPPD"
 
 
          
