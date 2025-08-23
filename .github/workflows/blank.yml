@@ -145,15 +145,6 @@ jobs:
          chmod 777 Ray.BiliBiliTool.Console
          ./Ray.BiliBiliTool.Console --runTasks=Daily
 
-      - name: mfuns
-        run: |
-         cd && cd gui 
-         git clone https://guihongwang:"$passwd"@github.com/GDWGH/CheckInForMfuns.git
-         cd CheckInForMfuns
-         pip install -r requirements.txt
-         cp /home/runner/gui/miniature-engine/token /home/runner/gui/CheckInForMfuns
-         python3 main.py
-         
       - name: kuro
         run:   |
          cd
@@ -163,6 +154,17 @@ jobs:
          pwd
          cp /home/runner/gui/miniature-engine/data.yaml /home/runner/Kuro-autosignin/config/
          python main.py
+
+      - name: mfuns
+        run: |
+         cd && cd gui 
+         git clone https://guihongwang:"$passwd"@github.com/GDWGH/CheckInForMfuns.git
+         cd CheckInForMfuns
+         pip install -r requirements.txt
+         cp /home/runner/gui/miniature-engine/token /home/runner/gui/CheckInForMfuns
+         python3 main.py
+         
+
 
 
 
