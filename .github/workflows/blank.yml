@@ -150,7 +150,7 @@ jobs:
          cd
          git clone https://github.com/mxyooR/Kuro-autosignin.git
          cd Kuro-autosignin
-         pip install -r  requirements.txt
+         pip install . -t .
          pwd
          cp /home/runner/gui/miniature-engine/data.yaml /home/runner/Kuro-autosignin/config/
          python main.py
