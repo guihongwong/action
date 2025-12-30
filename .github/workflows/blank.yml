@@ -145,15 +145,7 @@ jobs:
          chmod 777 Ray.BiliBiliTool.Console
          ./Ray.BiliBiliTool.Console --runTasks=Daily
 
-      - name: kuro
-        run:   |
-         cd
-         git clone https://github.com/mxyooR/Kuro-autosignin.git
-         cd Kuro-autosignin
-         pip install . -t .
-         pwd
-         cp /home/runner/gui/miniature-engine/data.yaml /home/runner/Kuro-autosignin/config/
-         python main.py
+
 
       - name: mfuns
         run: |
