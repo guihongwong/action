@@ -107,9 +107,9 @@ jobs:
          wget https://raw.githubusercontent.com/GDWGH/rdthimg-front/cf0a0c8f3fd58cfe602805793d3d824048a95b7f/20230618.png
          cd && cd gui
          mkdir 163 && cd 163
-         wget https://github.com/guihongwong/action/releases/download/file/Fuck163MusicTasks_linux_amd64
-         chmod 777 ./Fuck163MusicTasks_linux_amd64
-         pwd
+#         wget https://github.com/guihongwong/action/releases/download/file/Fuck163MusicTasks_linux_amd64
+#         chmod 777 ./Fuck163MusicTasks_linux_amd64
+#         pwd
          
       - name: export config
         run: |
@@ -122,7 +122,7 @@ jobs:
          cd  
          cd /home/runner
          cd gui/163 
-         ./Fuck163MusicTasks_linux_amd64
+#         ./Fuck163MusicTasks_linux_amd64
           
           
 #      - name: ncm
